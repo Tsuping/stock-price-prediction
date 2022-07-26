@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 company = 'FB'
 
 
-start = dt.datetime(2012,1,1)
+start = dt.datetime(2011,1,1)
 end = dt.datetime(2021,12,31)
 
 data = web.DataReader(company, 'yahoo', start, end)
@@ -50,7 +50,7 @@ model.add(Dense(units=1))
 
 model.compile(optimizer='adam', loss='mean_squared_error')
 
-model.fit(x_train, y_train, epochs=25, batch_size=32)
+model.fit(x_train, y_train, epochs=27, batch_size=45)
 
 test_start = dt.datetime(2021,12,31)
 test_end = dt.datetime.now()
